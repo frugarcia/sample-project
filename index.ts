@@ -7,6 +7,11 @@ require("dotenv").config({
       : path.resolve(process.cwd(), "./.env"),
 });
 
+const moment = require("moment");
+const formatDate = moment().format("DD/MM/YYYY - HH:mm:ss");
+
+console.log(formatDate);
+
 console.log("Enviroment Variable");
 console.log(process.env["NAME"]);
 console.log("---");
