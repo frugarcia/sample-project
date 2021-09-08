@@ -8,8 +8,13 @@ require("dotenv").config({
 });
 
 const moment = require("moment");
+
+import * as momentTZ from "moment-timezone";
+
+momentTZ.tz.setDefault("Europe/Madrid");
 const formatDate = moment().format("DD/MM/YYYY - HH:mm:ss");
 
+console.log("Format Time");
 console.log(formatDate);
 
 console.log("Enviroment Variable");
